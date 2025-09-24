@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+     float c,m,k;
+     scanf("%f%f%f",&c,&m,&k);
+     m=c/100;
+     k=m/1000;
+     printf("%.2f",m);
+     printf(" %.2f", k);
+    return 0;
+}
