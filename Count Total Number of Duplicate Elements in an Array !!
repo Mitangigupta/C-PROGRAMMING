@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+     int n,i,j,count,duplicates=0;
+    scanf("%d",&n);
+    int stu[n];                     
+    for(int i=0;i<n;i++){
+    scanf("%d",&stu[i]);
+    }
+    for(int i=0;i<n;i++){
+      int flag=0;
+        for(int j=0;j<i;j++){
+            if(stu[i]==stu[j]){
+             flag = 1;
+            break;
+            }
+        }
+        if(flag==0){
+            count=0;
+            for(j=0;j<n;j++){
+                if(stu[i]==stu[j]){
+                    count++;
+                }
+            }
+        if(count>1)
+            duplicates++;
+        }
+    }
+        printf("%d ",duplicates);
+    return 0;
+}
