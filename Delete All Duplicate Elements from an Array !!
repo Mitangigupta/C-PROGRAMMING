@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+     int n,i,j;
+    scanf("%d",&n);
+    int stu[n];
+    for(i=0;i<n;i++){
+        scanf("%d",&stu[i]);
+    }
+    for(i=0;i<n;i++){
+     int flag=0;
+     for(j=0;j<i;j++){
+         if(stu[i]==stu[j]){
+             flag=1;
+             break;
+         }
+     }
+          if(flag==0){
+        printf("%d ",stu[i]);
+    }
+    }
+    return 0;
+}
