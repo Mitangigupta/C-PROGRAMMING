@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int rever(int a, int rev) {
+    if (a == 0)
+        return rev;
+
+    return rever(a / 10, rev * 10 + (a % 10));
+}
+
+int main() {
+    int a;
+    scanf("%d", &a);
+
+    printf("%d", rever(a, 0));
+    return 0;
+}
