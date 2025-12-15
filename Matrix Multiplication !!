@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+      int n,i,j,k,n1,m,m1,sum;
+    scanf("%d%d",&n,&n1);
+    int stu[n][n1];
+    for(i=0;i<n;i++){
+        for(int j=0;j<n1;j++){
+    scanf("%d",&stu[i][j]);
+        }
+    }
+     scanf("%d%d",&m,&m1);
+    int stu1[m][m1];
+    for(i=0;i<m;i++){
+        for(int j=0;j<m1;j++){
+    scanf("%d",&stu1[i][j]);
+        }
+    }
+    if(n1!=m){
+       printf("Matrix multiplication not possible");
+    }
+    for(i=0;i<n;i++){
+        for(j=0;j<m1;j++){
+            sum=0;
+        for(k=0;k<n1;k++){
+            sum=sum+stu[i][k]*stu1[k][j];
+        }
+        printf("%d ",sum);
+        }
+        printf("\n");
+    }
+    return 0;
+}
